@@ -1,0 +1,3 @@
+game_id,player,team,market,line,odds_over,odds_under,book
+MIA@NYJ,Tyreek Hill,MIA,receiving_yards,50,+100,-130,FD
+CIN@DEN,Jake Browning,CIN,passing_yards,225,+182,-235,FD
