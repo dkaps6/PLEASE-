@@ -40,3 +40,23 @@ feeds:
   team_epa:  "https://raw.githubusercontent.com/nflverse/nflfastR-data/master/teams/teams_epa_2024.csv"
   team_pace: "https://raw.githubusercontent.com/nflverse/nflfastR-data/master/teams/teams_pace_2024.csv"
   team_proe: "https://raw.githubusercontent.com/nflverse/nflfastR-data/master/teams/teams_proe_2024.csv"
+odds:
+  provider: theoddsapi
+  region: us           # us | us2 | eu | uk (per The Odds API docs)
+  markets:             # map provider markets to our model markets
+    player_pass_yds:       passing_yards
+    player_rec_yds:        receiving_yards
+    player_rush_yds:       rushing_yards
+    player_receptions:     receptions
+    player_rush_att:       rush_attempts
+    player_anytime_td:     anytime_td
+  books:               # pick the books you care about (keys per API docs)
+    - fanduel
+    - draftkings
+    - betmgm
+  alt_like_markets:    # which markets often expose alt ladders
+    - player_pass_yds
+    - player_rec_yds
+    - player_rush_yds
+    - player_receptions
+  throttle_ms: 300     # courtesy delay between calls
