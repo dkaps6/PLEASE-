@@ -1,0 +1,42 @@
+season: 2025
+week: auto
+outputs:
+  folder: out
+  excel: Slate_Model_Output.xlsx
+
+defaults:
+  sd:
+    receiving_yards: 28
+    receptions: 1.6
+    rushing_yards: 22
+    rush_attempts: 4.0
+    passing_yards: 45
+
+risk:
+  edge_green: 0.04
+  edge_amber: 0.01
+  kelly_cap_straight: 0.05
+  kelly_cap_alt: 0.025
+  kelly_cap_sgp: 0.01
+
+volatility:
+  widen_sd_if_pressure_top10: 0.15
+  widen_sd_if_qb_lowtier: 0.10
+  wind_threshold_mph: 15
+  wind_sd_widen: 0.15
+  cold_threshold_f: 30
+  cold_sd_widen: 0.05
+
+parlays:
+  correlation_penalty: 0.90
+  buckets:
+    - {name: Safe,    min_edge_pct: 0.02, max_legs: 3}
+    - {name: Medium,  min_edge_pct: 0.04, max_legs: 4}
+    - {name: High,    min_edge_pct: 0.06, max_legs: 5}
+    - {name: Lottery, min_edge_pct: 0.03, max_legs: 8}
+
+feeds:
+  rbsdm_qb: "https://rbsdm.com/stats/stats.csv"
+  team_epa:  "https://raw.githubusercontent.com/nflverse/nflfastR-data/master/teams/teams_epa_2024.csv"
+  team_pace: "https://raw.githubusercontent.com/nflverse/nflfastR-data/master/teams/teams_pace_2024.csv"
+  team_proe: "https://raw.githubusercontent.com/nflverse/nflfastR-data/master/teams/teams_proe_2024.csv"
