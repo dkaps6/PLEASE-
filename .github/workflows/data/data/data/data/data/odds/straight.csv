@@ -1,0 +1,5 @@
+game_id,player,team,market,line,odds_over,odds_under,book
+MIA@NYJ,Tyreek Hill,MIA,receiving_yards,66.5,-115,-105,FD
+MIA@NYJ,Garrett Wilson,NYJ,receiving_yards,61.5,-112,-108,FD
+CIN@DEN,Jake Browning,CIN,passing_yards,219.5,-110,-110,FD
+CIN@DEN,Bo Nix,DEN,passing_yards,229.5,-110,-110,FD
