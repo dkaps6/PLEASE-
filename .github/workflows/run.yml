@@ -25,5 +25,5 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run the model
-      run: |
-        python run.py
+      run: PYTHONPATH=. python run.py
+
