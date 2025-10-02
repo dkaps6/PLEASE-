@@ -27,3 +27,10 @@ jobs:
     - name: Run the model
       run: PYTHONPATH=. python run.py
 
+    - name: Upload outputs (Excel & CSV)
+      uses: actions/upload-artifact@v4
+      with:
+        name: slate_outputs
+        path: |
+          out/Slate_Model_Output.xlsx
+          out/model_output.csv
