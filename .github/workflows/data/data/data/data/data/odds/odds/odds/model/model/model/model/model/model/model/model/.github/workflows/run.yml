@@ -1,4 +1,10 @@
-name: Run NFL Prop Model
+- name: Run the model
+  working-directory: ${{ github.workspace }}
+  env:
+    PYTHONPATH: ${{ github.workspace }}
+  run: |
+    python -V
+    python run.py
 
 on:
   workflow_dispatch:
